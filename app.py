@@ -35,12 +35,6 @@ def predict():
     years = data['Years']
     num_sites = data['Num_Sites']
 
-    # Utiliser request.form pour extraire les données du formulaire HTML
-    # age = float(request.form['Age'])
-    # print(age)
-    # account_manager = int(request.form['Account_Manager'])
-    # years = float(request.form['Years'])
-    # num_sites = int(request.form['Num_Sites'])
 
     # Créer un tableau numpy pour les données de prédiction
     features = np.array([[age, account_manager, years, num_sites]])

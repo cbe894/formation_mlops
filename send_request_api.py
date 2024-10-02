@@ -11,7 +11,7 @@ def generate_random_json():
     }
 
 # Boucle pour générer et afficher 20 objets JSON
-for i in range(20):
+for i in range(200):
     data = generate_random_json()
     print(data)
     response = requests.post(url, json=data)
