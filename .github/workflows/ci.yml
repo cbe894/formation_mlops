@@ -29,3 +29,10 @@ jobs:
     - name: Run tests
       run: |
         pytest test.py
+
+    - name: Wait for services to start
+      run: sleep 10
+
+    - name: Test if Prometheus is running
+      run: |
+        curl -s http://localhost:9090/metrics | grep -q "flask_app_requests_total"
